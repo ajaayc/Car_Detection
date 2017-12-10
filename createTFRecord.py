@@ -149,7 +149,7 @@ def create_tf_example(example,counter):
 
 def main(_):
   #writer = tf.python_io.TFRecordWriter(FLAGS.output_path)
-  writer = tf.python_io.TFRecordWriter("tfrecord.txt")
+  writer = tf.python_io.TFRecordWriter("train.records")
 
   # TODO(user): Write code to read in your dataset to examples variable
   examples = glob('deploy/trainval/*/*_image.jpg')
