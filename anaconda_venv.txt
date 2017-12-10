@@ -1,0 +1,7 @@
+#Sample shell code for managing conda virtual environment. Similar to Python virtualenv
+conda info --envs
+conda create -n test_env spyder #Creates spyder in virtual environment
+source activate test_env
+conda list
+source deactivate
+conda env remove test_env
