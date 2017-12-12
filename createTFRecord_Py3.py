@@ -64,10 +64,12 @@ def create_tf_example(example,counter):
   filename = str.encode(example) # Filename of the image. Empty if image is not from file
   #encoded_image_data = img.tostring() # Encoded image bytes
   #encoded_image_data = tf.gfile.FastGFile(filename, 'rb').read()
+
+  #See https://github.com/swirlingsand/deeper-traffic-lights/blob/master/data_conversion_bosch.py for example of how to read in a file
   with tf.gfile.GFile(filename, 'rb') as fid:
-          encoded_image_data = bytes(fid.read())
+          encoded_image_data = fid.read()
   
-  image_format = b'jpeg' # b'jpeg' or b'png'
+  image_format = 'jpg'.encode() # b'jpg' or b'png'
 
   xmins = [] # List of normalized left x coordinates in bounding box (1 per box)
   xmaxs = [] # List of normalized right x coordinates in bounding box
@@ -95,30 +97,18 @@ def create_tf_example(example,counter):
         
             vert_2D = np.dot(proj,np.vstack([vert_3D, np.ones(8)]))
             vert_2D = vert_2D / vert_2D[2, :]
-    
-#            allx = []
-#            ally = []
-            
-            xmin = min(vert_2D[0]) / width
-            xmax = max(vert_2D[0]) / width
+                
+            #Divided by width and height since train.py requires these are normalized
+            #Don't do integer division
+            xmin = min(vert_2D[0]) / float(width)
+            xmax = max(vert_2D[0]) / float(width)
              
-            ymin = min(vert_2D[1]) / height
-            ymax = max(vert_2D[1]) / height
+            ymin = min(vert_2D[1]) / float(height)
+            ymax = max(vert_2D[1]) / float(height)
             
             
             xmax = max(xmax, 1.01)
             ymax = max(ymax, 1.01)
-                
-#            for e in edges.T:
-#                x_pt = vert_2D[0, e]
-#                y_pt = vert_2D[1, e]
-#                allx = allx + x_pt.tolist()
-#                ally = ally + y_pt.tolist()
-    
-#            xmin = min(allx)
-#            xmax = max(allx)
-#            ymin = min(ally)
-#            ymax = max(ally)
             
             xmins.append(xmin)
             xmaxs.append(xmax)
