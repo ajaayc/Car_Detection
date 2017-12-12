@@ -1,0 +1,542 @@
+RUN 1_____________
+
+
+(tensorflow) C:\Users\rh\Documents\GitHub\Final_Project\Car_Detection>python train.py --train_dir=./models/train --pipeline_config_path=test_frcnn_resnet50_coco.config
+INFO:tensorflow:Scale of 0 disables regularizer.
+INFO:tensorflow:Scale of 0 disables regularizer.
+WARNING:tensorflow:From C:\Users\rh\Documents\GitHub\tensorflow\models\research\object_detection\trainer.py:210: create_global_step (from tensorflow.contrib.framework.python.ops.variables) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.create_global_step
+INFO:tensorflow:Scale of 0 disables regularizer.
+INFO:tensorflow:Scale of 0 disables regularizer.
+INFO:tensorflow:Scale of 0 disables regularizer.
+INFO:tensorflow:depth of additional conv before box predictor: 0
+INFO:tensorflow:Scale of 0 disables regularizer.
+INFO:tensorflow:Summary name /clone_loss is illegal; using clone_loss instead.
+C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\ops\gradients_impl.py:96: UserWarning: Converting sparse IndexedSlices to a dense Tensor of unknown shape. This may consume a large amount of memory.
+  "Converting sparse IndexedSlices to a dense Tensor of unknown shape. "
+2017-12-12 15:54:11.821489: I C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\platform\cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX AVX2
+2017-12-12 15:54:12.787152: I C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\common_runtime\gpu\gpu_device.cc:1030] Found device 0 with properties:
+name: GeForce GTX 1050 major: 6 minor: 1 memoryClockRate(GHz): 1.493
+pciBusID: 0000:01:00.0
+totalMemory: 4.00GiB freeMemory: 3.31GiB
+2017-12-12 15:54:12.787426: I C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\common_runtime\gpu\gpu_device.cc:1120] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: GeForce GTX 1050, pci bus id: 0000:01:00.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ./models/train\model.ckpt-0
+INFO:tensorflow:Starting Session.
+INFO:tensorflow:Saving checkpoint to path ./models/train\model.ckpt
+INFO:tensorflow:Starting Queues.
+INFO:tensorflow:global_step/sec: 0
+2017-12-12 15:54:43.286778: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\common_runtime\bfc_allocator.cc:217] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.14GiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory is available.
+INFO:tensorflow:Recording summary at step 0.
+2017-12-12 15:54:43.756529: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\common_runtime\bfc_allocator.cc:217] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.33GiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory is available.
+INFO:tensorflow:global step 1: loss = 227410.0938 (11.252 sec/step)
+INFO:tensorflow:global step 2: loss = 99275.8281 (0.692 sec/step)
+INFO:tensorflow:global step 3: loss = 39144.6445 (0.681 sec/step)
+INFO:tensorflow:global step 4: loss = 0.3655 (0.667 sec/step)
+INFO:tensorflow:global step 5: loss = 0.5315 (0.665 sec/step)
+INFO:tensorflow:global step 6: loss = 27256.7578 (0.669 sec/step)
+INFO:tensorflow:global step 7: loss = 13140.3887 (0.678 sec/step)
+2017-12-12 15:54:48.689870: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.78437185]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:54:48.690081: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.78437185]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:54:48.691083: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.78437185]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+INFO:tensorflow:Error reported to Coordinator: <class 'tensorflow.python.framework.errors_impl.InvalidArgumentError'>, assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.78437185]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+         [[Node: Loss/ToAbsoluteCoordinates/Assert/AssertGuard/Assert/_1058 = _Recv[client_terminated=false, recv_device="/job:localhost/replica:0/task:0/device:GPU:0", send_device="/job:localhost/replica:0/task:0/device:CPU:0", send_device_incarnation=1, tensor_name="edge_286_Loss/ToAbsoluteCoordinates/Assert/AssertGuard/Assert", tensor_type=DT_FLOAT, _device="/job:localhost/replica:0/task:0/device:GPU:0"]()]]
+
+Caused by op 'ToAbsoluteCoordinates/Assert/AssertGuard/Assert', defined at:
+  File "train.py", line 163, in <module>
+    tf.app.run()
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\platform\app.py", line 48, in run
+    _sys.exit(main(_sys.argv[:1] + flags_passthrough))
+  File "train.py", line 159, in main
+    worker_job_name, is_chief, FLAGS.train_dir)
+  File "C:\Users\rh\Documents\GitHub\tensorflow\models\research\object_detection\trainer.py", line 228, in train
+    clones = model_deploy.create_clones(deploy_config, model_fn, [input_queue])
+  File "C:\Users\rh\Documents\GitHub\tensorflow\models\research\slim\deployment\model_deploy.py", line 193, in create_clones
+    outputs = model_fn(*args, **kwargs)
+  File "C:\Users\rh\Documents\GitHub\tensorflow\models\research\object_detection\trainer.py", line 165, in _create_losses
+    prediction_dict = detection_model.predict(images)
+  File "C:\Users\rh\Documents\GitHub\tensorflow\models\research\object_detection\meta_architectures\faster_rcnn_meta_arch.py", line 563, in predict
+    anchors, image_shape))
+  File "C:\Users\rh\Documents\GitHub\tensorflow\models\research\object_detection\meta_architectures\faster_rcnn_meta_arch.py", line 622, in _predict_second_stage
+    anchors, image_shape)
+  File "C:\Users\rh\Documents\GitHub\tensorflow\models\research\object_detection\meta_architectures\faster_rcnn_meta_arch.py", line 927, in _postprocess_rpn
+    _) = self._format_groundtruth_data(image_shape)
+  File "C:\Users\rh\Documents\GitHub\tensorflow\models\research\object_detection\meta_architectures\faster_rcnn_meta_arch.py", line 1054, in _format_groundtruth_data
+    for boxes in self.groundtruth_lists(fields.BoxListFields.boxes)]
+  File "C:\Users\rh\Documents\GitHub\tensorflow\models\research\object_detection\meta_architectures\faster_rcnn_meta_arch.py", line 1054, in <listcomp>
+    for boxes in self.groundtruth_lists(fields.BoxListFields.boxes)]
+  File "C:\Users\rh\Documents\GitHub\tensorflow\models\research\object_detection\core\box_list_ops.py", line 811, in to_absolute_coordinates
+    'than %f: ' % maximum_normalized_coordinate, box_maximum])
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\util\tf_should_use.py", line 107, in wrapped
+    return _add_should_use_warning(fn(*args, **kwargs))
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\ops\control_flow_ops.py", line 134, in Assert
+    condition, no_op, true_assert, name="AssertGuard")
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\util\deprecation.py", line 316, in new_func
+    return func(*args, **kwargs)
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\ops\control_flow_ops.py", line 1864, in cond
+    orig_res_f, res_f = context_f.BuildCondBranch(false_fn)
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\ops\control_flow_ops.py", line 1725, in BuildCondBranch
+    original_result = fn()
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\ops\control_flow_ops.py", line 132, in true_assert
+    condition, data, summarize, name="Assert")
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\ops\gen_logging_ops.py", line 46, in _assert
+    name=name)
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\framework\op_def_library.py", line 787, in _apply_op_helper
+    op_def=op_def)
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\framework\ops.py", line 2956, in create_op
+    op_def=op_def)
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\framework\ops.py", line 1470, in __init__
+    self._traceback = self._graph._extract_stack()  # pylint: disable=protected-access
+
+InvalidArgumentError (see above for traceback): assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.78437185]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+         [[Node: Loss/ToAbsoluteCoordinates/Assert/AssertGuard/Assert/_1058 = _Recv[client_terminated=false, recv_device="/job:localhost/replica:0/task:0/device:GPU:0", send_device="/job:localhost/replica:0/task:0/device:CPU:0", send_device_incarnation=1, tensor_name="edge_286_Loss/ToAbsoluteCoordinates/Assert/AssertGuard/Assert", tensor_type=DT_FLOAT, _device="/job:localhost/replica:0/task:0/device:GPU:0"]()]]
+
+Traceback (most recent call last):
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\client\session.py", line 1323, in _do_call
+    return fn(*args)
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\client\session.py", line 1302, in _run_fn
+    status, run_metadata)
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\framework\errors_impl.py", line 473, in __exit__
+    c_api.TF_GetCode(self.status.status))
+tensorflow.python.framework.errors_impl.InvalidArgumentError: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.78437185]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+         [[Node: Loss/ToAbsoluteCoordinates/Assert/AssertGuard/Assert/_1058 = _Recv[client_terminated=false, recv_device="/job:localhost/replica:0/task:0/device:GPU:0", send_device="/job:localhost/replica:0/task:0/device:CPU:0", send_device_incarnation=1, tensor_name="edge_286_Loss/ToAbsoluteCoordinates/Assert/AssertGuard/Assert", tensor_type=DT_FLOAT, _device="/job:localhost/replica:0/task:0/device:GPU:0"]()]]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "train.py", line 163, in <module>
+    tf.app.run()
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\platform\app.py", line 48, in run
+    _sys.exit(main(_sys.argv[:1] + flags_passthrough))
+  File "train.py", line 159, in main
+    worker_job_name, is_chief, FLAGS.train_dir)
+  File "C:\Users\rh\Documents\GitHub\tensorflow\models\research\object_detection\trainer.py", line 332, in train
+    saver=saver)
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\contrib\slim\python\slim\learning.py", line 763, in train
+    sess, train_op, global_step, train_step_kwargs)
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\contrib\slim\python\slim\learning.py", line 487, in train_step
+    run_metadata=run_metadata)
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\client\session.py", line 889, in run
+    run_metadata_ptr)
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\client\session.py", line 1120, in _run
+    feed_dict_tensor, options, run_metadata)
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\client\session.py", line 1317, in _do_run
+    options, run_metadata)
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\client\session.py", line 1336, in _do_call
+    raise type(e)(node_def, op, message)
+tensorflow.python.framework.errors_impl.InvalidArgumentError: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.78437185]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+         [[Node: Loss/ToAbsoluteCoordinates/Assert/AssertGuard/Assert/_1058 = _Recv[client_terminated=false, recv_device="/job:localhost/replica:0/task:0/device:GPU:0", send_device="/job:localhost/replica:0/task:0/device:CPU:0", send_device_incarnation=1, tensor_name="edge_286_Loss/ToAbsoluteCoordinates/Assert/AssertGuard/Assert", tensor_type=DT_FLOAT, _device="/job:localhost/replica:0/task:0/device:GPU:0"]()]]
+
+Caused by op 'ToAbsoluteCoordinates/Assert/AssertGuard/Assert', defined at:
+  File "train.py", line 163, in <module>
+    tf.app.run()
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\platform\app.py", line 48, in run
+    _sys.exit(main(_sys.argv[:1] + flags_passthrough))
+  File "train.py", line 159, in main
+    worker_job_name, is_chief, FLAGS.train_dir)
+  File "C:\Users\rh\Documents\GitHub\tensorflow\models\research\object_detection\trainer.py", line 228, in train
+    clones = model_deploy.create_clones(deploy_config, model_fn, [input_queue])
+  File "C:\Users\rh\Documents\GitHub\tensorflow\models\research\slim\deployment\model_deploy.py", line 193, in create_clones
+    outputs = model_fn(*args, **kwargs)
+  File "C:\Users\rh\Documents\GitHub\tensorflow\models\research\object_detection\trainer.py", line 165, in _create_losses
+    prediction_dict = detection_model.predict(images)
+  File "C:\Users\rh\Documents\GitHub\tensorflow\models\research\object_detection\meta_architectures\faster_rcnn_meta_arch.py", line 563, in predict
+    anchors, image_shape))
+  File "C:\Users\rh\Documents\GitHub\tensorflow\models\research\object_detection\meta_architectures\faster_rcnn_meta_arch.py", line 622, in _predict_second_stage
+    anchors, image_shape)
+  File "C:\Users\rh\Documents\GitHub\tensorflow\models\research\object_detection\meta_architectures\faster_rcnn_meta_arch.py", line 927, in _postprocess_rpn
+    _) = self._format_groundtruth_data(image_shape)
+  File "C:\Users\rh\Documents\GitHub\tensorflow\models\research\object_detection\meta_architectures\faster_rcnn_meta_arch.py", line 1054, in _format_groundtruth_data
+    for boxes in self.groundtruth_lists(fields.BoxListFields.boxes)]
+  File "C:\Users\rh\Documents\GitHub\tensorflow\models\research\object_detection\meta_architectures\faster_rcnn_meta_arch.py", line 1054, in <listcomp>
+    for boxes in self.groundtruth_lists(fields.BoxListFields.boxes)]
+  File "C:\Users\rh\Documents\GitHub\tensorflow\models\research\object_detection\core\box_list_ops.py", line 811, in to_absolute_coordinates
+    'than %f: ' % maximum_normalized_coordinate, box_maximum])
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\util\tf_should_use.py", line 107, in wrapped
+    return _add_should_use_warning(fn(*args, **kwargs))
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\ops\control_flow_ops.py", line 134, in Assert
+    condition, no_op, true_assert, name="AssertGuard")
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\util\deprecation.py", line 316, in new_func
+    return func(*args, **kwargs)
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\ops\control_flow_ops.py", line 1864, in cond
+    orig_res_f, res_f = context_f.BuildCondBranch(false_fn)
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\ops\control_flow_ops.py", line 1725, in BuildCondBranch
+    original_result = fn()
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\ops\control_flow_ops.py", line 132, in true_assert
+    condition, data, summarize, name="Assert")
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\ops\gen_logging_ops.py", line 46, in _assert
+    name=name)
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\framework\op_def_library.py", line 787, in _apply_op_helper
+    op_def=op_def)
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\framework\ops.py", line 2956, in create_op
+    op_def=op_def)
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\framework\ops.py", line 1470, in __init__
+    self._traceback = self._graph._extract_stack()  # pylint: disable=protected-access
+
+InvalidArgumentError (see above for traceback): assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.78437185]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+         [[Node: Loss/ToAbsoluteCoordinates/Assert/AssertGuard/Assert/_1058 = _Recv[client_terminated=false, recv_device="/job:localhost/replica:0/task:0/device:GPU:0", send_device="/job:localhost/replica:0/task:0/device:CPU:0", send_device_incarnation=1, tensor_name="edge_286_Loss/ToAbsoluteCoordinates/Assert/AssertGuard/Assert", tensor_type=DT_FLOAT, _device="/job:localhost/replica:0/task:0/device:GPU:0"]()]]
+
+
+		 
+		 
+		 
+RUN 2___________		 
+		 
+		 
+(tensorflow) C:\Users\rh\Documents\GitHub\Final_Project\Car_Detection>python train.py --train_dir=./models/train --pipeline_config_path=test_frcnn_resnet50_coco.config > testOutput
+INFO:tensorflow:Scale of 0 disables regularizer.
+INFO:tensorflow:Scale of 0 disables regularizer.
+WARNING:tensorflow:From C:\Users\rh\Documents\GitHub\tensorflow\models\research\object_detection\trainer.py:210: create_global_step (from tensorflow.contrib.framework.python.ops.variables) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.create_global_step
+INFO:tensorflow:Scale of 0 disables regularizer.
+INFO:tensorflow:Scale of 0 disables regularizer.
+INFO:tensorflow:Scale of 0 disables regularizer.
+INFO:tensorflow:depth of additional conv before box predictor: 0
+INFO:tensorflow:Scale of 0 disables regularizer.
+INFO:tensorflow:Summary name /clone_loss is illegal; using clone_loss instead.
+C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\ops\gradients_impl.py:96: UserWarning: Converting sparse IndexedSlices to a dense Tensor of unknown shape. This may consume a large amount of memory.
+  "Converting sparse IndexedSlices to a dense Tensor of unknown shape. "
+2017-12-12 15:56:01.685269: I C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\platform\cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX AVX2
+2017-12-12 15:56:02.648427: I C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\common_runtime\gpu\gpu_device.cc:1030] Found device 0 with properties:
+name: GeForce GTX 1050 major: 6 minor: 1 memoryClockRate(GHz): 1.493
+pciBusID: 0000:01:00.0
+totalMemory: 4.00GiB freeMemory: 3.31GiB
+2017-12-12 15:56:02.648653: I C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\common_runtime\gpu\gpu_device.cc:1120] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: GeForce GTX 1050, pci bus id: 0000:01:00.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from ./models/train\model.ckpt-0
+INFO:tensorflow:Starting Session.
+INFO:tensorflow:Saving checkpoint to path ./models/train\model.ckpt
+INFO:tensorflow:Starting Queues.
+INFO:tensorflow:global_step/sec: 0
+2017-12-12 15:56:32.465815: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\common_runtime\bfc_allocator.cc:217] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.14GiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory is available.
+INFO:tensorflow:Recording summary at step 0.
+INFO:tensorflow:global step 1: loss = 234253.8906 (10.535 sec/step)
+INFO:tensorflow:global step 2: loss = 79177.1250 (0.660 sec/step)
+INFO:tensorflow:global step 3: loss = 29580.7578 (0.674 sec/step)
+INFO:tensorflow:global step 4: loss = 0.3578 (0.653 sec/step)
+INFO:tensorflow:global step 5: loss = 0.2448 (0.656 sec/step)
+INFO:tensorflow:global step 6: loss = 0.1430 (0.654 sec/step)
+INFO:tensorflow:global step 7: loss = 20144.9258 (0.670 sec/step)
+INFO:tensorflow:global step 8: loss = 15409.6816 (0.681 sec/step)
+INFO:tensorflow:global step 9: loss = 18436.5273 (0.682 sec/step)
+INFO:tensorflow:global step 10: loss = 17359.2891 (0.672 sec/step)
+INFO:tensorflow:global step 11: loss = 14532.1250 (0.673 sec/step)
+INFO:tensorflow:global step 12: loss = 6894.5830 (0.664 sec/step)
+INFO:tensorflow:global step 13: loss = 10190.2959 (0.668 sec/step)
+INFO:tensorflow:global step 14: loss = 3490.6858 (0.689 sec/step)
+INFO:tensorflow:global step 15: loss = 5920.9478 (0.666 sec/step)
+INFO:tensorflow:global step 16: loss = 0.0427 (0.666 sec/step)
+INFO:tensorflow:global step 17: loss = 4814.4668 (0.678 sec/step)
+INFO:tensorflow:global step 18: loss = 53.9826 (0.680 sec/step)
+INFO:tensorflow:global step 19: loss = 1954.1393 (0.673 sec/step)
+INFO:tensorflow:global step 20: loss = 1059.5117 (0.673 sec/step)
+INFO:tensorflow:global step 21: loss = 1183.2141 (0.697 sec/step)
+INFO:tensorflow:global step 22: loss = 1664.7765 (0.676 sec/step)
+INFO:tensorflow:global step 23: loss = 0.0444 (0.672 sec/step)
+INFO:tensorflow:global step 24: loss = 1879.2654 (0.671 sec/step)
+2017-12-12 15:56:49.348770: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.348770: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.348802: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.348791: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.349964: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.349041: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.349195: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.349644: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.349004: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.350196: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.350518: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.350807: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.351233: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.351534: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.351802: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.353521: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.355729: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.355975: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.354835: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.356524: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.355374: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.354096: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.354793: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.357550: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.355109: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.358276: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.357024: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.357303: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.356235: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.357792: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.356739: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.358328: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.360525: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.358946: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.359254: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.359842: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.360133: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.358588: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.360809: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.361057: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.361326: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.361570: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.361810: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.362063: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.362313: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.366066: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.366309: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.365323: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.365582: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.367035: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.367346: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.365061: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.367720: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.366774: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.365823: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.368414: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.367481: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.366526: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.367946: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.368185: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.369611: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.369853: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.368893: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.370326: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.369389: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.364776: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.371000: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.370067: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.371459: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.371681: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.371914: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.372151: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.371212: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.369160: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.370541: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.370757: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+2017-12-12 15:56:49.368637: W C:\tf_jenkins\home\workspace\rel-win\M\windows-gpu\PY\36\tensorflow\core\framework\op_kernel.cc:1192] Invalid argument: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+INFO:tensorflow:Error reported to Coordinator: <class 'tensorflow.python.framework.errors_impl.InvalidArgumentError'>, assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+         [[Node: Loss/ToAbsoluteCoordinates/Assert/AssertGuard/Assert/_1058 = _Recv[client_terminated=false, recv_device="/job:localhost/replica:0/task:0/device:GPU:0", send_device="/job:localhost/replica:0/task:0/device:CPU:0", send_device_incarnation=1, tensor_name="edge_286_Loss/ToAbsoluteCoordinates/Assert/AssertGuard/Assert", tensor_type=DT_FLOAT, _device="/job:localhost/replica:0/task:0/device:GPU:0"]()]]
+
+Caused by op 'ToAbsoluteCoordinates/Assert/AssertGuard/Assert', defined at:
+  File "train.py", line 163, in <module>
+    tf.app.run()
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\platform\app.py", line 48, in run
+    _sys.exit(main(_sys.argv[:1] + flags_passthrough))
+  File "train.py", line 159, in main
+    worker_job_name, is_chief, FLAGS.train_dir)
+  File "C:\Users\rh\Documents\GitHub\tensorflow\models\research\object_detection\trainer.py", line 228, in train
+    clones = model_deploy.create_clones(deploy_config, model_fn, [input_queue])
+  File "C:\Users\rh\Documents\GitHub\tensorflow\models\research\slim\deployment\model_deploy.py", line 193, in create_clones
+    outputs = model_fn(*args, **kwargs)
+  File "C:\Users\rh\Documents\GitHub\tensorflow\models\research\object_detection\trainer.py", line 165, in _create_losses
+    prediction_dict = detection_model.predict(images)
+  File "C:\Users\rh\Documents\GitHub\tensorflow\models\research\object_detection\meta_architectures\faster_rcnn_meta_arch.py", line 563, in predict
+    anchors, image_shape))
+  File "C:\Users\rh\Documents\GitHub\tensorflow\models\research\object_detection\meta_architectures\faster_rcnn_meta_arch.py", line 622, in _predict_second_stage
+    anchors, image_shape)
+  File "C:\Users\rh\Documents\GitHub\tensorflow\models\research\object_detection\meta_architectures\faster_rcnn_meta_arch.py", line 927, in _postprocess_rpn
+    _) = self._format_groundtruth_data(image_shape)
+  File "C:\Users\rh\Documents\GitHub\tensorflow\models\research\object_detection\meta_architectures\faster_rcnn_meta_arch.py", line 1054, in _format_groundtruth_data
+    for boxes in self.groundtruth_lists(fields.BoxListFields.boxes)]
+  File "C:\Users\rh\Documents\GitHub\tensorflow\models\research\object_detection\meta_architectures\faster_rcnn_meta_arch.py", line 1054, in <listcomp>
+    for boxes in self.groundtruth_lists(fields.BoxListFields.boxes)]
+  File "C:\Users\rh\Documents\GitHub\tensorflow\models\research\object_detection\core\box_list_ops.py", line 811, in to_absolute_coordinates
+    'than %f: ' % maximum_normalized_coordinate, box_maximum])
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\util\tf_should_use.py", line 107, in wrapped
+    return _add_should_use_warning(fn(*args, **kwargs))
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\ops\control_flow_ops.py", line 134, in Assert
+    condition, no_op, true_assert, name="AssertGuard")
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\util\deprecation.py", line 316, in new_func
+    return func(*args, **kwargs)
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\ops\control_flow_ops.py", line 1864, in cond
+    orig_res_f, res_f = context_f.BuildCondBranch(false_fn)
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\ops\control_flow_ops.py", line 1725, in BuildCondBranch
+    original_result = fn()
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\ops\control_flow_ops.py", line 132, in true_assert
+    condition, data, summarize, name="Assert")
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\ops\gen_logging_ops.py", line 46, in _assert
+    name=name)
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\framework\op_def_library.py", line 787, in _apply_op_helper
+    op_def=op_def)
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\framework\ops.py", line 2956, in create_op
+    op_def=op_def)
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\framework\ops.py", line 1470, in __init__
+    self._traceback = self._graph._extract_stack()  # pylint: disable=protected-access
+
+InvalidArgumentError (see above for traceback): assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+         [[Node: Loss/ToAbsoluteCoordinates/Assert/AssertGuard/Assert/_1058 = _Recv[client_terminated=false, recv_device="/job:localhost/replica:0/task:0/device:GPU:0", send_device="/job:localhost/replica:0/task:0/device:CPU:0", send_device_incarnation=1, tensor_name="edge_286_Loss/ToAbsoluteCoordinates/Assert/AssertGuard/Assert", tensor_type=DT_FLOAT, _device="/job:localhost/replica:0/task:0/device:GPU:0"]()]]
+
+Traceback (most recent call last):
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\client\session.py", line 1323, in _do_call
+    return fn(*args)
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\client\session.py", line 1302, in _run_fn
+    status, run_metadata)
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\framework\errors_impl.py", line 473, in __exit__
+    c_api.TF_GetCode(self.status.status))
+tensorflow.python.framework.errors_impl.InvalidArgumentError: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+         [[Node: Loss/ToAbsoluteCoordinates/Assert/AssertGuard/Assert/_1058 = _Recv[client_terminated=false, recv_device="/job:localhost/replica:0/task:0/device:GPU:0", send_device="/job:localhost/replica:0/task:0/device:CPU:0", send_device_incarnation=1, tensor_name="edge_286_Loss/ToAbsoluteCoordinates/Assert/AssertGuard/Assert", tensor_type=DT_FLOAT, _device="/job:localhost/replica:0/task:0/device:GPU:0"]()]]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "train.py", line 163, in <module>
+    tf.app.run()
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\platform\app.py", line 48, in run
+    _sys.exit(main(_sys.argv[:1] + flags_passthrough))
+  File "train.py", line 159, in main
+    worker_job_name, is_chief, FLAGS.train_dir)
+  File "C:\Users\rh\Documents\GitHub\tensorflow\models\research\object_detection\trainer.py", line 332, in train
+    saver=saver)
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\contrib\slim\python\slim\learning.py", line 763, in train
+    sess, train_op, global_step, train_step_kwargs)
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\contrib\slim\python\slim\learning.py", line 487, in train_step
+    run_metadata=run_metadata)
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\client\session.py", line 889, in run
+    run_metadata_ptr)
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\client\session.py", line 1120, in _run
+    feed_dict_tensor, options, run_metadata)
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\client\session.py", line 1317, in _do_run
+    options, run_metadata)
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\client\session.py", line 1336, in _do_call
+    raise type(e)(node_def, op, message)
+tensorflow.python.framework.errors_impl.InvalidArgumentError: assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+         [[Node: Loss/ToAbsoluteCoordinates/Assert/AssertGuard/Assert/_1058 = _Recv[client_terminated=false, recv_device="/job:localhost/replica:0/task:0/device:GPU:0", send_device="/job:localhost/replica:0/task:0/device:CPU:0", send_device_incarnation=1, tensor_name="edge_286_Loss/ToAbsoluteCoordinates/Assert/AssertGuard/Assert", tensor_type=DT_FLOAT, _device="/job:localhost/replica:0/task:0/device:GPU:0"]()]]
+
+Caused by op 'ToAbsoluteCoordinates/Assert/AssertGuard/Assert', defined at:
+  File "train.py", line 163, in <module>
+    tf.app.run()
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\platform\app.py", line 48, in run
+    _sys.exit(main(_sys.argv[:1] + flags_passthrough))
+  File "train.py", line 159, in main
+    worker_job_name, is_chief, FLAGS.train_dir)
+  File "C:\Users\rh\Documents\GitHub\tensorflow\models\research\object_detection\trainer.py", line 228, in train
+    clones = model_deploy.create_clones(deploy_config, model_fn, [input_queue])
+  File "C:\Users\rh\Documents\GitHub\tensorflow\models\research\slim\deployment\model_deploy.py", line 193, in create_clones
+    outputs = model_fn(*args, **kwargs)
+  File "C:\Users\rh\Documents\GitHub\tensorflow\models\research\object_detection\trainer.py", line 165, in _create_losses
+    prediction_dict = detection_model.predict(images)
+  File "C:\Users\rh\Documents\GitHub\tensorflow\models\research\object_detection\meta_architectures\faster_rcnn_meta_arch.py", line 563, in predict
+    anchors, image_shape))
+  File "C:\Users\rh\Documents\GitHub\tensorflow\models\research\object_detection\meta_architectures\faster_rcnn_meta_arch.py", line 622, in _predict_second_stage
+    anchors, image_shape)
+  File "C:\Users\rh\Documents\GitHub\tensorflow\models\research\object_detection\meta_architectures\faster_rcnn_meta_arch.py", line 927, in _postprocess_rpn
+    _) = self._format_groundtruth_data(image_shape)
+  File "C:\Users\rh\Documents\GitHub\tensorflow\models\research\object_detection\meta_architectures\faster_rcnn_meta_arch.py", line 1054, in _format_groundtruth_data
+    for boxes in self.groundtruth_lists(fields.BoxListFields.boxes)]
+  File "C:\Users\rh\Documents\GitHub\tensorflow\models\research\object_detection\meta_architectures\faster_rcnn_meta_arch.py", line 1054, in <listcomp>
+    for boxes in self.groundtruth_lists(fields.BoxListFields.boxes)]
+  File "C:\Users\rh\Documents\GitHub\tensorflow\models\research\object_detection\core\box_list_ops.py", line 811, in to_absolute_coordinates
+    'than %f: ' % maximum_normalized_coordinate, box_maximum])
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\util\tf_should_use.py", line 107, in wrapped
+    return _add_should_use_warning(fn(*args, **kwargs))
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\ops\control_flow_ops.py", line 134, in Assert
+    condition, no_op, true_assert, name="AssertGuard")
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\util\deprecation.py", line 316, in new_func
+    return func(*args, **kwargs)
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\ops\control_flow_ops.py", line 1864, in cond
+    orig_res_f, res_f = context_f.BuildCondBranch(false_fn)
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\ops\control_flow_ops.py", line 1725, in BuildCondBranch
+    original_result = fn()
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\ops\control_flow_ops.py", line 132, in true_assert
+    condition, data, summarize, name="Assert")
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\ops\gen_logging_ops.py", line 46, in _assert
+    name=name)
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\framework\op_def_library.py", line 787, in _apply_op_helper
+    op_def=op_def)
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\framework\ops.py", line 2956, in create_op
+    op_def=op_def)
+  File "C:\Users\rh\Anaconda3\envs\tensorflow\lib\site-packages\tensorflow\python\framework\ops.py", line 1470, in __init__
+    self._traceback = self._graph._extract_stack()  # pylint: disable=protected-access
+
+InvalidArgumentError (see above for traceback): assertion failed: [maximum box coordinate value is larger than 1.010000: ] [1.07594228]
+         [[Node: ToAbsoluteCoordinates/Assert/AssertGuard/Assert = Assert[T=[DT_STRING, DT_FLOAT], summarize=3, _device="/job:localhost/replica:0/task:0/device:CPU:0"](ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch/_37, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/data_0, ToAbsoluteCoordinates/Assert/AssertGuard/Assert/Switch_1/_39)]]
+         [[Node: Loss/ToAbsoluteCoordinates/Assert/AssertGuard/Assert/_1058 = _Recv[client_terminated=false, recv_device="/job:localhost/replica:0/task:0/device:GPU:0", send_device="/job:localhost/replica:0/task:0/device:CPU:0", send_device_incarnation=1, tensor_name="edge_286_Loss/ToAbsoluteCoordinates/Assert/AssertGuard/Assert", tensor_type=DT_FLOAT, _device="/job:localhost/replica:0/task:0/device:GPU:0"]()]]
+
+
+(tensorflow) C:\Users\rh\Documents\GitHub\Final_Project\Car_Detection>
