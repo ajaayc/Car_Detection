@@ -107,8 +107,8 @@ def create_tf_example(example,counter):
             ymax = max(vert_2D[1]) / float(height)
             
             
-            xmax = max(xmax, 1.01)
-            ymax = max(ymax, 1.01)
+            #xmax = min(xmax, 1.01)
+            #ymax = min(ymax, 1.01)
             
             xmins.append(xmin)
             xmaxs.append(xmax)
