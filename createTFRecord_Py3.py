@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from glob import glob
 import sys
+import random
 
 from object_detection.utils import dataset_util
 
@@ -163,13 +164,19 @@ def create_tf_example(example,counter,datatype):
 
 
 def main(_):
-  if len(sys.argv) != 2 or not(sys.argv[1] == 'test' or sys.argv[1] == 'train'):
+  #Take in a command line argument for proportion of TFRecord that should be for
+  #training and validation.
+
+  if len(sys.argv) != 3 or not(sys.argv[1] == 'test' or sys.argv[1] == 'train'):
       print('Error: Incorrect number of arguments')
-      print('Usage: python createTFRecord_Py3.py <test OR train>')
+      print('Usage: python createTFRecord_Py3.py <test OR train> <Proportion for train/validation>')
       exit
 
   #Type of the data. 'test' or 'train'
   datatype = sys.argv[1]
+  
+  #Proportion of test/train that we'll use for testing
+  proportion = float(sys.argv[2])
 
   #writer = tf.python_io.TFRecordWriter(FLAGS.output_path)
     
@@ -182,14 +189,27 @@ def main(_):
       writer = tf.python_io.TFRecordWriter("test.record")
       examples = glob('deploy/test/*/*_image.jpg')
 
+  #Writer for validation file
+  validwriter = tf.python_io.TFRecordWriter("eval.record")
+
   counter = 1
 
-  for example in examples:
+  #Decide which indices should
+  #indices we'll pick.
+  #Generate num_training numbers
+  num_training = int(proportion * len(examples))
+  training_indices = set(random.sample(range(0,len(examples)),num_training))  
+
+  for index,example in enumerate(examples):
     tf_example = create_tf_example(example,counter,datatype)
     counter += 1
-    writer.write(tf_example.SerializeToString())
+    if index in training_indices:
+        writer.write(tf_example.SerializeToString())
+    else:
+        validwriter.write(tf_example.SerializeToString())
 
   writer.close()
+  validwriter.close()
 
 
 if __name__ == '__main__':
