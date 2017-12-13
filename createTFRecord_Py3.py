@@ -171,7 +171,7 @@ def main(_):
       print('Error: Incorrect number of arguments')
       print('Usage: python createTFRecord_Py3.py <test OR train> <Proportion for train/validation>')
       exit
-
+      
   #Type of the data. 'test' or 'train'
   datatype = sys.argv[1]
   
@@ -199,6 +199,11 @@ def main(_):
   #Generate num_training numbers
   num_training = int(proportion * len(examples))
   training_indices = set(random.sample(range(0,len(examples)),num_training))  
+
+  f = open('train_split.txt','w')
+  f.write('num_train,num_eval\n')
+  f.write(str(num_training) + '\n' + str(len(examples) - num_training) + '\n')
+  f.close()
 
   for index,example in enumerate(examples):
     tf_example = create_tf_example(example,counter,datatype)
