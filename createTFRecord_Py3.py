@@ -20,6 +20,12 @@ class_strings = ['Unknown', 'Compacts', 'Sedans', 'SUVs', 'Coupes',
            'Boats', 'Helicopters', 'Planes', 'Service', 'Emergency',
            'Military', 'Commercial', 'Trains']
 
+#Map each class to count of the class
+class_counts = {}
+
+for i in class_strings:
+    class_counts[i] = 0
+
 def rot(n, theta):
     K = np.array([[0, -n[2], n[1]], [n[2], 0, -n[0]], [-n[1], n[0], 0]])
     return np.identity(3) + np.sin(theta) * K + (1 - np.cos(theta)) * np.dot(K,K)
@@ -121,6 +127,9 @@ def create_tf_example(example,counter,datatype):
                 
                 class_int = int(b[9])
                 class_text = str.encode(class_strings[class_int])
+                
+                #Statistical count of classes
+                class_counts[class_strings[class_int]] += 1
         
                 classes.append(class_int)
                 classes_text.append(class_text)
@@ -167,10 +176,10 @@ def main(_):
   #Take in a command line argument for proportion of TFRecord that should be for
   #training and validation.
 
-  if len(sys.argv) != 3 or not(sys.argv[1] == 'test' or sys.argv[1] == 'train'):
+  if len(sys.argv) != 4 or not(sys.argv[1] == 'test' or sys.argv[1] == 'train'):
       print('Error: Incorrect number of arguments')
-      print('Usage: python createTFRecord_Py3.py <test OR train> <Proportion for train/validation>')
-      exit
+      print('Usage: python createTFRecord_Py3.py <test OR train> <Proportion for train/validation> <stats or no_stats>')
+      sys.exit()
       
   #Type of the data. 'test' or 'train'
   datatype = sys.argv[1]
@@ -216,6 +225,14 @@ def main(_):
   writer.close()
   validwriter.close()
 
+
+  #Output statistics
+  if datatype == 'train' and sys.argv[3] == 'stats':      
+      f = open('class_stats.txt','w')
+      f.write('class_name'.ljust(15) + 'count'.ljust(15) + 'proportion' + '\n')
+      for i in class_counts.keys():
+          f.write(i.ljust(15) + str(class_counts[i]).ljust(15) + str((1.0 * class_counts[i])/len(examples)) + '\n')
+      f.close()
 
 if __name__ == '__main__':
   tf.app.run()
