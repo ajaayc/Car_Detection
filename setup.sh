@@ -10,3 +10,5 @@ sudo apt-get install protobuf-compiler
 
 #Follow setup instructions at. Need protoc
 #https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md
+
+#Change the ./core/box_list_ops.py maximum_box_variable to prevent assertions
