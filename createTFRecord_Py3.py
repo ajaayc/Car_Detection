@@ -192,11 +192,11 @@ def main(_):
   # TODO(user): Write code to read in your dataset to examples variable
   if datatype == 'train':
       writer = tf.python_io.TFRecordWriter("train.record")
-      examples = glob('deploy/trainval/*/*_image.jpg')
+      examples = glob('rob599_dataset_deploy/trainval/*/*_image.jpg')
 
   if datatype == 'test':
       writer = tf.python_io.TFRecordWriter("test.record")
-      examples = glob('deploy/test/*/*_image.jpg')
+      examples = glob('rob599_dataset_deploy/test/*/*_image.jpg')
 
   #Writer for validation file
   validwriter = tf.python_io.TFRecordWriter("eval.record")

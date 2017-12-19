@@ -89,7 +89,7 @@ maxcars = 12
 
 model = CarClassifier()
 
-for snapshot in files[6:11]:
+for snapshot in files:
     print(snapshot)
     img = plt.imread(snapshot)
     
@@ -116,10 +116,10 @@ for snapshot in files[6:11]:
     
     f.write(name + '\n')
     
-    xyz = np.fromfile(snapshot.replace('_image.jpg', '_cloud.bin'), dtype=np.float32)
-    xyz.resize([3, xyz.size // 3])
-    proj = np.fromfile(snapshot.replace('_image.jpg', '_proj.bin'), dtype=np.float32)
-    proj.resize([3, 4])
+    #xyz = np.fromfile(snapshot.replace('_image.jpg', '_cloud.bin'), dtype=np.float32)
+    #xyz.resize([3, xyz.size // 3])
+    #proj = np.fromfile(snapshot.replace('_image.jpg', '_proj.bin'), dtype=np.float32)
+    #proj.resize([3, 4])
 
 #    try:
 #        bbox = np.fromfile(snapshot.replace('_image.jpg', '_bbox.bin'), dtype=np.float32)

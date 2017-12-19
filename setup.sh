@@ -12,3 +12,4 @@ sudo apt-get install protobuf-compiler
 #https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md
 
 #Change the ./core/box_list_ops.py maximum_box_variable to prevent assertions
+#Variable is called maximum_normalized_coordinate
