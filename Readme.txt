@@ -1,4 +1,16 @@
-#It is recommended that you set this up on an AWS instance with GPU computing power. We used the p2.8xlarge EC2 instance. It has 8 GPU's and charges ~$7.2/hour, but there is a cheaper version called the p2.xlarge that has 1 GPU and is charged at ~$0.90/hour. By default, new AWS users are not allowed to use either of these GPU instances. You will have to submit a request to Amazon to increase the allowed limit of how many of these instances you want to be able to use, as these limits are initially 0.
+--------------------------------------------------------------
+#Environment: Ubunutu Linux 16.04
+#Installation of dependences is explained in the report below.
+--------------------------------------------------------------
+
+#To run the neural network immediately, the pretrained weights are included in test_model/frozen_inference_graph.pb.
+#Run this to create the Kaggle submission:
+python eval_test.py
+
+--------------------------------------------------------------
+#Running everything from scratch if you don't have test_model/frozen_inference_graph.pb:
+
+#It is recommended that you set this up on an AWS instance with GPU computing power. We used the p2.8xlarge EC2 instance. It has 8 GPU's, but there is a cheaper version called the p2.xlarge that has 1 GPU. By default, new AWS users are not allowed to use either of these GPU instances. You will have to submit a request to Amazon to increase the allowed limit of how many of these instances you want to be able to use, as these limits are initially 0.
 #We used the Deep Learning AMI (Ubuntu) Version 2.0.
 
 #After getting permission to use the p2.8x large instance, you can ssh into it as follows:
@@ -71,11 +83,21 @@ You should see “Found device 0 with properties: name: GRID K520”
 wget http://umich.edu/~fcav/rob599_dataset_deploy.zip
 unzip rob599_dataset_deploy.zip -d rob599_dataset_deploy
 
+#Get existing rcnn coco neural network for transfer learning
+mkdir models/pretrained
+cd models/pretrained
+#download pretrained model and unzip
+wget http://download.tensorflow.org/models/object_detection/faster_rcnn_resnet50_coco_2017_11_08.tar.gz
+gunzip *.gz
+cd ../..
+
 #Create a TFRecord file called train.record from the training data. The train.record file contains all of the data required to 
 python createTFRecord_Py3.py 1 no_stats
 
 #Runs training
-python train.py --train_dir=./models/train --pipeline_config_path=test_frcnn_resnet50_coco.config
+python train.py --train_dir=./models/train --pipeline_config_path=test_frcnn_resnet50_coco.config --num_clones=8
+
+#NOTE: num_clones refers to the number of GPU's on your unit. If you use this option, make sure that the batch_size parameter size in the test_frcnn_resnet50_coco.config file is at least the same number as the num_clones you specify here.
 
 #To run training in the background even when you're not connected to the AWS instance, use nohup as follows:
 nohup python train.py --train_dir=./models/train --pipeline_config_path=test_frcnn_resnet50_coco.config&
@@ -97,9 +119,12 @@ ssh -i aws_ubuntu1.pem -NL 6006:localhost:6006 ubuntu@ec2-18-217-250-20.us-east-
 #Then visit localhost:6006 in your web browser to see the evaluation results
 
 #After training is done, create, frozen_inference_graph.pb, a frozen version of the neural network that can be used to classify images. frozen_inference_graph.pb is stored in fine_tuned_model folder after running this command.
-python export_inference_graph.py --input_type image_tensor --pipeline_config_path ./test_frcnn_resnet50_coco.config --trained_checkpoint_prefix ./models/train/model.ckpt-<Number of Steps you used from .config file> --output_directory ./fine_tuned_model
+python export_inference_graph.py --input_type image_tensor --pipeline_config_path ./test_frcnn_resnet50_coco.config --trained_checkpoint_prefix ./models/train/model.ckpt-<Number of Steps you used from .config file> --output_directory ./test_model
 
 #Then to create the Kaggle submission, use
 python eval_test.py
 
 #Submission file is result.txt. The eval_test.py script uses the neural network stored in ./fine_tuned_model/frozen_inference_graph.pb to count the number of cars in each of the test images in rob599_dataset_deploy/test.
+
+#You can also find a link for this project at:
+https://github.com/ajaayc/Car_Detection

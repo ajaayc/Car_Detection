@@ -46,6 +46,8 @@ Example usage:
 import functools
 import os
 import tensorflow as tf
+import logging
+logging.basicConfig(level=logging.INFO)
 
 from object_detection import evaluator
 from object_detection.builders import input_reader_builder
