@@ -8,7 +8,7 @@ import random
 
 class CarClassifier(object):
     def __init__(self):
-        PATH_TO_MODEL = 'fine_tuned_model/frozen_inference_graph.pb'
+        PATH_TO_MODEL = 'test_model/frozen_inference_graph.pb'
         self.detection_graph = tf.Graph()
         with self.detection_graph.as_default():
             od_graph_def = tf.GraphDef()
@@ -78,21 +78,27 @@ f.write('guid/image,N\n')
 
 # Set of all files in the test set
 #All x thousand test images
+#preDir = 'C:/Users/rh/Downloads/UMich Material/EECS 498/Final Project/Full Data Set/test/'
+#files = glob(preDir + '*/*_image.jpg')
 files = glob('rob599_dataset_deploy/test/*/*_image.jpg')
 #Small subset of test images
 #files = glob('deploy/test/*/*_image.jpg')
 
 #Consider an object to be anything with a score greater than this
-score_threshold = 0.05
+score_threshold = 0.60
 
 maxcars = 12
 
 model = CarClassifier()
 
+counter = 1
 for snapshot in files:
-    print(snapshot)
-    img = plt.imread(snapshot)
     
+        
+    print(snapshot)
+    print(counter)
+    img = plt.imread(snapshot)
+    counter += 1
     #RANDOM COUNT
     #numcars = random.randint(0,maxcars + 1)
     
@@ -111,7 +117,10 @@ for snapshot in files:
     
     #Get image name
     name = snapshot.replace('rob599_dataset_deploy/test/','')
+    #name = snapshot.replace('C:/Users/rh/Downloads/UMich Material/EECS 498/Final Project/Full Data Set/test/', '')
+#    name = snapshot[len(preDir):]
     name = name.replace('_image.jpg','')
+    name = name.replace('\\','/')
     name = name + "," + str(numcars)
     
     f.write(name + '\n')

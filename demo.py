@@ -41,7 +41,7 @@ classes = ['Unknown', 'Compacts', 'Sedans', 'SUVs', 'Coupes',
            'Boats', 'Helicopters', 'Planes', 'Service', 'Emergency',
            'Military', 'Commercial', 'Trains']
 
-files = glob('deploy/*/*/*_image.jpg')
+files = glob('deploy/trainval/*/*_image.jpg')
 idx = np.random.randint(0, len(files))
 snapshot = files[idx]
 print(snapshot)
