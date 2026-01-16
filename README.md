@@ -145,7 +145,7 @@ mkdir models/pretrained
 cd models/pretrained
 ```
 
-download pretrained model and unzip
+**Download pretrained model and unzip**
 
 ```bash
 wget http://download.tensorflow.org/models/object_detection/faster_rcnn_resnet50_coco_2017_11_08.tar.gz
