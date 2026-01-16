@@ -1,6 +1,4 @@
----
-
-## Environment: Ubunutu Linux 16.04
+## Environment: Ubuntu Linux 16.04
 **Installation of dependences is explained in the report below.**
 
 ---
@@ -24,7 +22,7 @@ We used the Deep Learning AMI (Ubuntu) Version 2.0.
 After getting permission to use the p2.8x large instance, you can ssh into it as follows:
 
 ```bash
-ssh -i <key_file>.pem ubnutu@<PublicDNS>
+ssh -i <key_file>.pem ubuntu@<PublicDNS>
 ```
 
 Where the key file was given to you when you set up the instance, and the Public DNS is stated in your EC2 console. ssh from the same directory containing the .pem file.
@@ -154,7 +152,7 @@ gunzip *.gz
 cd ../..
 ```
 
-**Create a TFRecord file called train.record from the training data. The train.record file contains all of the data required to**
+**Create a TFRecord file called train.record from the training data. The train.record file contains all of the data required to train the model.**
 
 ```bash
 python createTFRecord_Py3.py 1 no_stats
